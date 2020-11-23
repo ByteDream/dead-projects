@@ -1,0 +1,6 @@
+Keystore password: @VR&_*p%9!L+kC3FZ4QX
+keytool -keygen -keyalg RSA -keysize 2048 -validity 365 -alias sslkey -keystore sslKeyStore.jks
+keytool -export -alias sslkey -keystore sslKeyStore.jks -file sslKey.cert
+keytool -import -file sslKey.cert -alias sslkey -keystore sslTrustStore.jts
+
+365 28.03.2020
