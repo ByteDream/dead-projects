@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="date" alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="258.0" text="Date" textFill="#a0a2ab">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="50.0" prefWidth="67.0" />
+            <Label fx:id="size" alignment="BOTTOM_LEFT" prefHeight="24.0" prefWidth="178.0" text="Size" textFill="#a0a2ab">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </center>
+   <left>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="434.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="fileImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane prefHeight="50.0" prefWidth="4.0" />
+            <Button fx:id="filename" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Filename" textFill="#a0a2ab">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="139.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="optionsButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+               <contextMenu>
+                  <ContextMenu fx:id="options">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></Button>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>
