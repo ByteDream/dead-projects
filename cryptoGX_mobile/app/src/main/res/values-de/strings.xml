@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_en_decrypt_headline">Text ent- / verschlüsseln</string>
+    <string name="file_en_decrypt_headline">Dateien ent- / verschlüsseln</string>
+    <string name="secure_delete_files_headline">Dateien sicher löschen</string>
+    <string name="key_hint">Schlüssel</string>
+    <string name="show_text_en_decrypt_key">Schlüssel anzeigen</string>
+    <string name="text_en_decrypt_encrypted_text_hint">Verschlüsselter Text</string>
+    <string name="text_en_decrypt_decrypted_text_hint">Entschlüsselter Text</string>
+    <string name="text_en_decrypt_encrypt_button_text">Verschlüsseln</string>
+    <string name="text_en_decrypt_decrypt_button_text">Entschlüsseln</string>
+    <string name="advanced_text">Erweitert</string>
+    <string name="algorithm_text">Algorithmus</string>
+    <string name="salt_hint">Salt</string>
+    <string name="file_en_decrypt_choose_files">Dateien auswählen...</string>
+    <string name="cancel_text">Stoppen</string>
+    <string name="choose_files_text">Dateien auswählen...</string>
+    <string name="iterations_hint">Wiederholungen</string>
+    <string name="delete_text">Löschen</string>
+    <string name="empty_key">Leerer Schlüssel wurde gegeben</string>
+    <string name="empty_encrypted_text">Leerer verschlüsselter Text wurde gegeben</string>
+    <string name="output_file_hint">Ausgabe Datei</string>
+    <string name="could_not_create_folder">"Ordner konnte nicht erstellt werden: "</string>
+    <string name="no_file_path">Pfad der Datei konnte nicht gefunden werden:</string>
+    <string name="empty_iterations">Keine Wiederholungen gegeben</string>
+    <string name="wrong_iterations">Falsche Wiederholungen gegeben</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">cryptoGX</string>
+
+    <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+    <!-- ca-app-pub-8690297592769912~2837426184-->
+    <string name="app_id" translatable="false">ca-app-pub-8690297592769912~2837426184</string>
+
+    <string name="text_en_decrypt_headline">En- / decrypt text</string>
+    <string name="file_en_decrypt_headline">En- / decrypt files</string>
+    <string name="secure_delete_files_headline">Secure delete files</string>
+    <string name="key_hint">Key</string>
+    <string name="show_text_en_decrypt_key">Show key</string>
+    <string name="text_en_decrypt_encrypted_text_hint">Encrypted text</string>
+    <string name="text_en_decrypt_decrypted_text_hint">Decrypted text</string>
+    <string name="text_en_decrypt_encrypt_button_text">Encrypt</string>
+    <string name="text_en_decrypt_decrypt_button_text">Decrypt</string>
+    <string name="advanced_text">Advanced</string>
+    <string name="algorithm_text">Algortihm</string>
+    <string name="salt_hint">Salt</string>
+    <string name="file_en_decrypt_choose_files">Choose files...</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="choose_files_text">Choose files...</string>
+    <string name="iterations_hint">Iterations</string>
+    <string name="delete_text">Delete</string>
+    <string name="empty_key">Empty key is given</string>
+    <string name="empty_encrypted_text">Empty encrypted text is given</string>
+    <string name="output_file_hint">Output file</string>
+    <string name="could_not_create_folder">Couldn\'t create folder:</string>
+    <string name="no_file_path">Couldn\'t get path from file:</string>
+    <string name="empty_iterations">Empty iterations are given</string>
+    <string name="wrong_iterations">Wrong iterations are given</string>
+</resources>

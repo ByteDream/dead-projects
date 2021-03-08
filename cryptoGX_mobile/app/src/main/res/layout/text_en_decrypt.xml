@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textEnDecryptFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".TextEnDecrypt">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textEnDecryptLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textEnDecryptHeaderText"
+            android:layout_width="300dp"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/text_en_decrypt_headline"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textEnDecryptKeyLayout"
+            android:layout_width="308dp"
+            android:layout_height="65dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptHeaderText"
+            app:layout_constraintVertical_bias="0.0"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEnDecryptKeyEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/key_hint"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/textEnDecryptDecryptedText"
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:background="@drawable/decrypt_border_style"
+            android:gravity="top"
+            android:hint="@string/text_en_decrypt_decrypted_text_hint"
+            android:inputType="text|textMultiLine"
+            android:visibility="visible"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/textEnDecryptAdvancedText"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptKeyLayout"
+            app:layout_constraintVertical_bias="0.073"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/textEnDecryptEncryptedText"
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:width="165dp"
+            android:background="@drawable/encrypt_border_style"
+            android:gravity="top"
+            android:hint="@string/text_en_decrypt_encrypted_text_hint"
+            android:inputType="text|textMultiLine"
+            android:visibility="visible"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/textEnDecryptAdvancedText"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptDecryptedText"
+            app:layout_constraintVertical_bias="0.17000002"
+            tools:layout_editor_absoluteX="1dp" />
+
+        <Button
+            android:id="@+id/textEnDecryptEncryptButton"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round_button_style"
+            android:onClick="encryptTextButton"
+            android:text="@string/text_en_decrypt_encrypt_button_text"
+            app:layout_constraintBottom_toTopOf="@+id/textEnDecryptAdvancedText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptEncryptedText"
+            app:layout_constraintVertical_bias="0.538" />
+
+        <ProgressBar
+            android:id="@+id/textEnDecryptProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/textEnDecryptAdvancedText"
+            app:layout_constraintEnd_toStartOf="@+id/textEnDecryptDecryptButton"
+            app:layout_constraintStart_toEndOf="@+id/textEnDecryptEncryptButton"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptEncryptedText"
+            app:layout_constraintVertical_bias="0.58000004" />
+
+        <Button
+            android:id="@+id/textEnDecryptDecryptButton"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round_button_style"
+            android:onClick="decryptTextButton"
+            android:text="@string/text_en_decrypt_decrypt_button_text"
+            app:layout_constraintBottom_toTopOf="@+id/textEnDecryptAdvancedText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.946"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptEncryptedText"
+            app:layout_constraintVertical_bias="0.538" />
+
+        <View
+            android:id="@+id/textEnDecryptSeparator1"
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptKeyLayout"
+            app:layout_constraintVertical_bias="0.79" />
+
+        <TextView
+            android:id="@+id/textEnDecryptAdvancedText"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="@string/advanced_text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textEnDecryptSeparator2"
+            app:layout_constraintStart_toEndOf="@+id/textEnDecryptSeparator1"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptKeyLayout"
+            app:layout_constraintVertical_bias="0.79" />
+
+        <View
+            android:id="@+id/textEnDecryptSeparator2"
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptKeyLayout"
+            app:layout_constraintVertical_bias="0.79" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textEnDecryptSaltLayout"
+            android:layout_width="140dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptAdvancedText"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEnDecryptSaltEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/salt_hint"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textEnDecryptAlgorithmText"
+            android:layout_width="109dp"
+            android:layout_height="29dp"
+            android:gravity="center"
+            android:text="@string/algorithm_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptAdvancedText"
+            app:layout_constraintVertical_bias="0.135" />
+
+        <Spinner
+            android:id="@+id/textEnDecryptAlgorithms"
+            android:layout_width="160dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/spinner_style"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textEnDecryptAlgorithmText"
+            app:layout_constraintVertical_bias="0.0">
+
+        </Spinner>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
