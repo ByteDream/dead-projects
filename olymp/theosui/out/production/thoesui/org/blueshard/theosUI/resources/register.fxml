@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import org.blueshard.theosUI.theosFX.TFXPasswordField?>
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="642.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.blueshard.theosUI.controller.RegisterController">
+   <children>
+      <ImageView fx:id="theosLogo" fitHeight="70.0" fitWidth="70.0" layoutX="286.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="518.0" layoutY="19.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" onAction="#toLogin" style="-fx-background-color: #151928; -fx-background-radius: 7;" text="Einloggen" textAlignment="CENTER" textFill="#a0a2ab">#
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <HBox layoutX="268.0" layoutY="86.0" prefHeight="18.0" prefWidth="98.0">
+         <children>
+            <Text fill="#2196f3" strokeType="OUTSIDE" strokeWidth="0.0" text="Theos">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="UI">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="registerCode" labelFloat="true" layoutX="223.0" layoutY="140.0" prefWidth="197.0" promptText="Registrierungscode" style="-fx-text-fill: #a0a2ab;" unFocusColor="#a0a2ab" />
+      <JFXTextField fx:id="usernameInput" labelFloat="true" layoutX="53.0" layoutY="200.0" prefWidth="197.0" promptText="Benutzername" style="-fx-text-fill: #a0a2ab" unFocusColor="#a0a2ab">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="mailInput" labelFloat="true" layoutX="53.0" layoutY="290.0" prefWidth="197.0" promptText="E-Mail (Optional)" style="-fx-text-fill: #a0a2ab" unFocusColor="#a0a2ab">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <TFXPasswordField fx:id="passwordInput" labelFloat="true" layoutX="374.0" layoutY="200.0" prefWidth="197.0" promptText="Passwort" style="-fx-text-fill: #a0a2ab" unFocusColor="#a0a2ab">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TFXPasswordField>
+      <Text fx:id="passwordSafety" fill="#a0a2ab" layoutX="375.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <TFXPasswordField fx:id="rePasswordInput" labelFloat="true" layoutX="374.0" layoutY="290.0" prefWidth="197.0" promptText="Passwort wiederholen" style="-fx-text-fill: #a0a2ab" unFocusColor="#a0a2ab">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TFXPasswordField>
+      <Text fx:id="passwordMatch" text="Die Passwörter stimmen nicht überein" fill="RED" visible="false" layoutX="375.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <JFXCheckBox fx:id="keepLoggedIn" layoutX="152.0" layoutY="381.0" text="Eingeloggt bleiben" textFill="#a0a2ab">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXCheckBox>
+      <Button layoutX="340.0" layoutY="374.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" style="-fx-background-color: #24B8E9;" text="Registrieren" onAction="#register">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text fx:id="result" layoutX="131.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="380.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="BOTTOM_LEFT" layoutX="45.0" prefHeight="162.0" prefWidth="1035.0">
+               <children>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="203.0" text="Meine Dateien" textFill="#a0a2ab">
+                           <font>
+                              <Font name="Z003-MediumItalic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="90.0" prefWidth="630.0" />
+                        <JFXButton fx:id="upload" text="Hochladen" textFill="#a0a2ab">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="46.0" prefWidth="1035.0" />
+                  <BorderPane prefHeight="46.0" prefWidth="1080.0">
+                     <center>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="31.0" prefWidth="136.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton text="Datum des Uploads" textFill="#c9ffe6">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXButton>
+                              <Pane prefHeight="36.0" prefWidth="248.0" />
+                              <JFXButton text="Größe" textFill="#c9ffe6">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </center>
+                     <left>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Pane prefHeight="46.0" prefWidth="12.0" />
+                              <JFXButton text="Name" textFill="#c9ffe6e5">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </left>
+                  </BorderPane>
+               </children>
+            </VBox>
+            <Separator layoutX="20.0" layoutY="168.0" prefHeight="0.0" prefWidth="1040.0" style="-fx-border-color: #a0a2ab; -fx-border-width: 0 1 0 0;" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="400.0" prefWidth="1080.0" style="-fx-background-color: #2D3447;" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="filesBox" prefHeight="398.0" prefWidth="1080.0" style="-fx-background-color: #2D3447;" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
